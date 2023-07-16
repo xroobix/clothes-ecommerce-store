@@ -1,17 +1,13 @@
 'use client';
 
 import Button from '@/components/ui/button';
+import useHasMounted from '@/hooks/use-has-mounted';
 import { ShoppingBag } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 const NavbarActions = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const hasMounted = useHasMounted();
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
+  if (!hasMounted) return null;
 
   return (
     <div className="ml-auto flex items-center gap-x-4">
