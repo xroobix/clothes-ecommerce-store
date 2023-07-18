@@ -49,7 +49,7 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
             <Button
               className={cn(
                 'text-sm rounded-md text-slate-800 border p-2 border-slate-300 bg-white',
-                selectedValue === filter.id && 'bg-black'
+                selectedValue === filter.id && 'bg-black text-white'
               )}
               onClick={() => onClick(filter.id)}
             >
